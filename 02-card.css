@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+margin:0;
+box-sizing:border-box;
+padding: 0;
+}
+:root{
+    --color-primario:#e84d3b;
+}
+body{
+    background-color: #eee;
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    height: 60px;
+    background:-webkit-linear-gradient(left,var(--color-primario),#ee9389);
+}
+.color__primario{
+    color: var(--color-primario);
+}
+h1{
+    color: #444;
+    text-align: center;
+    margin: 40px 0;
+}
+.cards{
+    padding: 0 50px 50px 50px ;
+}
+.card{
+    height: 400px;
+    width: 300px;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 1px;
+    display: inline-block;
+    margin: 20px;
+}
+/* El card y todos los elemento dentro del card */
+.card, .card *{
+    transition: all 0.2s ease;
+}
+.card__imagen{
+    height: 60%;
+    position: relative;
+}
+.card__imagen img{
+    height: 100%;
+    width: 100%;
+}
+.card__texto1{
+    position: absolute;
+    bottom: 0;
+    background-color: var(--color-primario);
+    color: white;
+    padding: 8px 11px;
+    border-radius: 1px;
+}
+.card__texto2{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    background-color: var(--color-primario);
+    color: white;
+    text-align: center;
+    line-height: 0.8rem;
+    padding: 5px;
+}
+.card__texto2 span{
+    font-size:0.7rem; 
+}
+.card__info{
+    height: 40%;
+    padding: 20px;
+    position: relative;
+}
+.card__subtitulo{
+    color: var(--color-primario);
+    margin-top: 5px;
+}
+.card__feed{
+    color: #888;
+    position: absolute;
+    bottom: 20px;
+}
+.card__descripcion{
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: #222;
+    line-height: 1.1rem;
+    /* display: none; */
+    visibility: hidden;
+    opacity: 0;
+}
+.card:hover .card__descripcion{
+    /* display: block; */
+    visibility: visible;
+    opacity: 1;
+}
+.card:hover .card__info{
+    height: 60%;
+}
+.card:hover .card__imagen{
+    height: 40%;
+}
+
+.card:hover .card__imagen img{
+filter: brightness(0.5);
+}
+.card:hover{
+    box-shadow: #bbb 0px 0px 20px;
+    transform: scale(1.01);
+}
